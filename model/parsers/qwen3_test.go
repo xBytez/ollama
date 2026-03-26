@@ -32,7 +32,7 @@ func TestQwen3ParserThinkingEnabledWithExplicitOpeningTag(t *testing.T) {
 
 	content, thinking, calls, err := parser.Add("<think>\nLet me think...</think>Answer.", true)
 	if err != nil {
-		t.Fatalf("parse failed: %v", err)
+		t.Fatalf("parse explicitopening failed: %v", err)
 	}
 
 	if thinking != "Let me think..." {
